@@ -1,0 +1,11 @@
+import streamlit as st
+
+st.title("GIẢI PHƯƠNG TRÌNH BẬC NHẤT!")
+st.snow() 
+a = st.number_input('Tham số a')
+b = st.number_input('Tham số b')
+x = (-b)/a
+x = round(x,1)
+if st.button('OK'):
+  st.success(f'Phương trình có một nghiệm là: {x}')
+  st.balloons()
