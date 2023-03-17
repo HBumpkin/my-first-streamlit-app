@@ -1,0 +1,22 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+st.snow() 
+st.title("Revenue Prediction")
+c = st.number_input('Input Temperature')
+st.caption('Revenue Prediction')
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('/content/drive/MyDrive/IceCreamData.csv')
+df.head()
+x = list(df['Temperature'].values)
+y = list(df['Revenue'].values)
+d = 0
+for i in x:
+  if x == c:
+    d = i
+if st.button('Predict'):
+  st.balloons()
+  st.success(y[d])
